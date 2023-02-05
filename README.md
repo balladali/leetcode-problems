@@ -4,9 +4,9 @@ Examples:
 
 linked lists:
 - https://leetcode.com/problems/merge-k-sorted-lists/
-- https://leetcode.com/problems/linked-list-cycle/
-- https://leetcode.com/problems/add-two-numbers/
-- https://leetcode.com/problems/reverse-linked-list/
+- https://leetcode.com/problems/linked-list-cycle/ (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/add-two-numbers/ (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/reverse-linked-list/ (<span style="color:green">resolved</span>)
 
 binary search:
 - https://leetcode.com/problems/binary-search/
