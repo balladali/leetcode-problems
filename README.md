@@ -3,7 +3,7 @@
 Examples:
 
 linked lists:
-- https://leetcode.com/problems/merge-k-sorted-lists/
+- https://leetcode.com/problems/merge-k-sorted-lists/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/linked-list-cycle/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/add-two-numbers/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/reverse-linked-list/ (<span style="color:green">resolved</span>)
