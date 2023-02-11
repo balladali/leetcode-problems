@@ -9,8 +9,8 @@ linked lists:
 - https://leetcode.com/problems/reverse-linked-list/ (<span style="color:green">resolved</span>)
 
 binary search:
-- https://leetcode.com/problems/binary-search/
-- https://leetcode.com/problems/guess-number-higher-or-lower/
+- https://leetcode.com/problems/binary-search/ (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/guess-number-higher-or-lower/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/search-a-2d-matrix/
 - https://leetcode.com/problems/search-in-rotated-sorted-array/
 - https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
