@@ -11,10 +11,10 @@ linked lists:
 binary search:
 - https://leetcode.com/problems/binary-search/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/guess-number-higher-or-lower/ (<span style="color:green">resolved</span>)
-- https://leetcode.com/problems/search-a-2d-matrix/
-- https://leetcode.com/problems/search-in-rotated-sorted-array/
-- https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
-- https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
+- https://leetcode.com/problems/search-a-2d-matrix/ (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/search-in-rotated-sorted-array/ (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ (<span style="color:green">resolved</span>)
 
 hash table:
 - https://leetcode.com/problems/single-number/ - O(1) по памяти
