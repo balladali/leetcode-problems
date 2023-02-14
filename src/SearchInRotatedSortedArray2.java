@@ -15,31 +15,23 @@ public class SearchInRotatedSortedArray2 {
         if (midElem == target) {
             return true;
         }
-        if (target < midElem) {
-            if (target < nums[left]) {
-                if (nums[left] == midElem) {
-                    return search(nums, target, left, mid - 1) || search(nums, target, mid + 1, right);
-                }
-                if (nums[left] > midElem) {
-                    return search(nums, target, left, mid - 1);
-                } else {
-                    return search(nums, target, mid + 1, right);
-                }
-            } else {
-                return search(nums, target, left, mid - 1);
+        if (midElem >= nums[left]) {
+            if (nums[left] == midElem) {
+                return search(nums, target, left, mid - 1) || search(nums, target, mid + 1, right);
             }
-        } else {
-            if (target > nums[right]) {
-                if (nums[right] == midElem) {
-                    return search(nums, target, left, mid - 1) || search(nums, target, mid + 1, right);
-                }
-                if (nums[right] < midElem) {
-                    return search(nums, target, mid + 1, right);
-                } else {
-                    return search(nums, target, left, mid - 1);
-                }
+            if (target >= nums[left] && target < midElem) {
+                return search(nums, target, left, mid - 1);
             } else {
                 return search(nums, target, mid + 1, right);
+            }
+        } else {
+            if (nums[right] == midElem) {
+                return search(nums, target, left, mid - 1) || search(nums, target, mid + 1, right);
+            }
+            if (target <= nums[right] && target > midElem) {
+                return search(nums, target, mid + 1, right);
+            } else {
+                return search(nums, target, left, mid - 1);
             }
         }
     }

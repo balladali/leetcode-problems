@@ -11,25 +11,19 @@ public class SearchInRotatedSortedArray {
             if (midElem == target) {
                 return mid;
             }
-            if (target < midElem) {
-                if (target < nums[left]) {
-                    if (nums[left] > midElem) {
-                        right = mid - 1;
-                    } else {
-                        left = mid + 1;
-                    }
-                } else {
+            if (midElem >= nums[left]) {
+                // left part is sorted
+                if (target >= nums[left] && target < midElem) {
                     right = mid - 1;
-                }
-            } else {
-                if (target > nums[right]) {
-                    if (nums[right] < midElem) {
-                        left = mid + 1;
-                    } else {
-                        right = mid - 1;
-                    }
                 } else {
                     left = mid + 1;
+                }
+            } else {
+                // right part is sorted
+                if (target <= nums[right] && target > midElem) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
                 }
             }
         }

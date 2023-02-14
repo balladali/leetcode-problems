@@ -17,8 +17,8 @@ binary search:
 - https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ (<span style="color:green">resolved</span>)
 
 hash table:
-- https://leetcode.com/problems/single-number/ - O(1) по памяти
-- https://leetcode.com/problems/two-sum/
+- https://leetcode.com/problems/single-number/ - O(1) по памяти (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/two-sum/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/4sum/
 - https://leetcode.com/problems/group-anagrams/
 - https://leetcode.com/problems/valid-anagram/
