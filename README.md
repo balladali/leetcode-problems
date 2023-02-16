@@ -20,8 +20,8 @@ hash table:
 - https://leetcode.com/problems/single-number/ - O(1) по памяти (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/two-sum/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/4sum/ (<span style="color:green">resolved</span>)
-- https://leetcode.com/problems/group-anagrams/
-- https://leetcode.com/problems/valid-anagram/
+- https://leetcode.com/problems/group-anagrams/ (<span style="color:green">resolved</span>)
+- https://leetcode.com/problems/valid-anagram/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/find-all-anagrams-in-a-string/
 
 queue/stack:
