@@ -22,13 +22,13 @@ hash table:
 - https://leetcode.com/problems/4sum/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/group-anagrams/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/valid-anagram/ (<span style="color:green">resolved</span>)
-- https://leetcode.com/problems/find-all-anagrams-in-a-string/
+- https://leetcode.com/problems/find-all-anagrams-in-a-string/ (<span style="color:green">resolved</span>)
 
 queue/stack:
-- https://leetcode.com/problems/valid-parentheses/
+- https://leetcode.com/problems/valid-parentheses/ (<span style="color:green">resolved</span>)
 
 dfs/bfs:
-- https://leetcode.com/problems/number-of-islands/
+- https://leetcode.com/problems/number-of-islands/ (<span style="color:green">resolved</span>)
 - https://leetcode.com/problems/remove-invalid-parentheses/
 
 sort:
