@@ -29,7 +29,7 @@ queue/stack:
 
 dfs/bfs:
 - https://leetcode.com/problems/number-of-islands/ (<span style="color:green">resolved</span>)
-- https://leetcode.com/problems/remove-invalid-parentheses/
+- https://leetcode.com/problems/remove-invalid-parentheses/ (<span style="color:green">resolved</span>)
 
 sort:
 - https://leetcode.com/problems/merge-intervals/
