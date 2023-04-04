@@ -1,5 +1,6 @@
 /*
     Link: https://leetcode.com/problems/move-zeroes
+    Algorithm: Two pointers
  */
 public class MoveZeros {
     public void moveZeroes(int[] nums) {

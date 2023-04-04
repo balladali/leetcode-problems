@@ -1,5 +1,6 @@
 /*
     Link: https://leetcode.com/problems/reverse-string
+    Algorithm: Two pointers
  */
 public class ReverseString {
     public void reverseString(char[] s) {
