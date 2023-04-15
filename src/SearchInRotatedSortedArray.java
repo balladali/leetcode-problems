@@ -1,5 +1,6 @@
 /*
     Link: https://leetcode.com/problems/search-in-rotated-sorted-array
+    Algorithm: Binary Search
  */
 public class SearchInRotatedSortedArray {
     public int search(int[] nums, int target) {
