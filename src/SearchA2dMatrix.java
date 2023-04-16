@@ -1,5 +1,6 @@
 /*
     Link: https://leetcode.com/problems/search-a-2d-matrix/
+    Algorithm: Binary Search
  */
 public class SearchA2dMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
