@@ -6,7 +6,7 @@ import java.util.List;
     Link: https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii
     Algorithm: DFS, BFS
  */
-public class PopulatingNextRightPointersШnEachNode2 {
+public class PopulatingNextRightPointersInEachNode2 {
     public Node connect(Node root) {
         if (root == null) {
             return root;
