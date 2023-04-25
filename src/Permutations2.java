@@ -11,13 +11,11 @@ public class Permutations2 {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
         boolean[] used = new boolean[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            findPermutations(result, i, new ArrayList<>(), used, nums);
-        }
+        findPermutations(result, new ArrayList<>(), used, nums);
         return result;
     }
 
-    private void findPermutations(List<List<Integer>> result, int i, List<Integer> permutation, boolean[] used, int[] nums) {
+    private void findPermutations(List<List<Integer>> result, List<Integer> permutation, boolean[] used, int[] nums) {
         if (permutation.size() == nums.length) {
             result.add(new ArrayList<>(permutation));
         }
@@ -27,7 +25,7 @@ public class Permutations2 {
             }
             permutation.add(nums[j]);
             used[j] = true;
-            findPermutations(result, j, permutation, used, nums);
+            findPermutations(result, permutation, used, nums);
             used[j] = false;
             permutation.remove(permutation.size() - 1);
         }
