@@ -10,24 +10,23 @@ public class SubarraySumEqualToTarget {
         for (int i = 0; i < a.length; i++) {
             array[i] = Integer.parseInt(a[i]);
         }
-        System.out.println(Arrays.toString(findSubArray(array, target)));
+        findSubArray(array, target);
     }
 
-    private static int[] findSubArray(int[] a, int target) {
-        int l = 0;
-        int r = 0;
-        int sum = a[l];
-        while (r < a.length) {
-            sum += a[r];
-            if (sum == target) {
-                return new int[] {l, r};
+    private static void findSubArray(int[] a, int target) {
+        int currentSum = a[0];
+        int start = 0;
+        for (int i = 1; i < a.length; i++) {
+            while (currentSum > target && start < i - 1) {
+                currentSum -= a[start];
+                start++;
             }
-            if (sum < target) {
-                r++;
-            } else {
-                l++;
+            if (currentSum == target) {
+                System.out.println("start=" + start + ", end=" + (i - 1));
+                return;
             }
+            currentSum += a[i];
         }
-        return new int[] {-1, -1};
+        System.out.println("Not found");
     }
 }
