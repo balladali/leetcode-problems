@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Scanner;
 
 // [1,1,0]
 // [0,0,1,1,0,1,1,0]
 // [1,1,1,0,1,1,0,1,1,1,1,1,1]
+// [1,1,1,0,1,1,0,0,1,1,1,1,1,1]
 
 public class MaxOneSequence {
     public static void main(String[] args) {
@@ -18,10 +20,10 @@ public class MaxOneSequence {
         int count = 0;
         List<Integer> list = new ArrayList<>();
 
-        for (String s : a) {
-            if ("1".equals(s)) {
+        for (int i = 0; i < a.length; i++) {
+            if ("1".equals(a[i])) {
                 count++;
-            } else if (count > 0) {
+            } else if (count > 0 || (i - 1 > 0 && "0".equals(a[i - 1]))) {
                 list.add(count);
                 count = 0;
             }
@@ -39,10 +41,10 @@ public class MaxOneSequence {
         int count = 0;
         int previous = 0;
 
-        for (String s : a) {
-            if ("1".equals(s)) {
+        for (int i = 0; i < a.length; i++) {
+            if ("1".equals(a[i])) {
                 count++;
-            } else if (count > 0) {
+            } else if (count > 0 || (i - 1 > 0 && "0".equals(a[i - 1]))) {
                 maxCount = Math.max(maxCount, previous + count);
                 previous = count;
                 count = 0;
