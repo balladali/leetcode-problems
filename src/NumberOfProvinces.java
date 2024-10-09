@@ -24,4 +24,28 @@ public class NumberOfProvinces {
             }
         }
     }
+
+    //-----------------------------------------------------
+
+    public int findCircleNum2(int[][] isConnected) {
+        int count = 0;
+        int n = isConnected.length;
+        boolean[] visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                count++;
+                dfs2(i, visited, isConnected);
+            }
+        }
+        return count;
+    }
+
+    private void dfs2(int i, boolean[] visited, int[][] isConnected) {
+        for (int j = 0; j < isConnected[0].length; j++) {
+            if (!visited[j] && isConnected[i][j] == 1) {
+                visited[j] = true;
+                dfs2(j, visited, isConnected);
+            }
+        }
+    }
 }
