@@ -1,4 +1,6 @@
 import java.util.LinkedList;
+import java.util.Queue;
+
 /*
     Link: https://leetcode.com/problems/rotting-oranges
     Algorithm: BFS
@@ -45,5 +47,56 @@ public class RottingOranges {
         }
         visited[i][j] = 2;
         queue.add(new int[]{i, j, t + 1});
+    }
+
+    //---------------------- BFS ----------------------------
+
+    public int orangesRotting2(int[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
+        Queue<int[]> q = new LinkedList<>();
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 2) {
+                    q.offer(new int[] {i, j});
+                }
+            }
+        }
+
+        int minutes = -1;
+        while (!q.isEmpty()) {
+            minutes++;
+            int size = q.size();
+            for (int k = 0; k < size; k++) {
+                int[] cur = q.poll();
+                int i = cur[0];
+                int j = cur[1];
+                if (i - 1 >= 0 && grid[i - 1][j] == 1) {
+                    grid[i - 1][j] = 2;
+                    q.offer(new int[]{i - 1, j});
+                }
+                if (i + 1 < m && grid[i + 1][j] == 1) {
+                    grid[i + 1][j] = 2;
+                    q.offer(new int[]{i + 1, j});
+                }
+                if (j - 1 >= 0 && grid[i][j - 1] == 1) {
+                    grid[i][j - 1] = 2;
+                    q.offer(new int[]{i, j - 1});
+                }
+                if (j + 1 < n && grid[i][j + 1] == 1) {
+                    grid[i][j + 1] = 2;
+                    q.offer(new int[]{i, j + 1});
+                }
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 1) {
+                    return -1;
+                }
+            }
+        }
+        return minutes == -1 ? 0 : minutes;
     }
 }
