@@ -4,22 +4,34 @@
  */
 public class FindPeakElement {
     public int findPeakElement(int[] nums) {
-        int left = 0;
-        int right = nums.length - 1;
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-            int midElem = nums[mid];
-            int leftElem = mid - 1 < 0 ? Integer.MIN_VALUE : nums[mid - 1];
-            int rightElem = mid + 1 >= nums.length ? Integer.MIN_VALUE : nums[mid + 1];
-            if (midElem > leftElem && midElem > rightElem) {
+        int l = 0;
+        int r = nums.length - 1;
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+            boolean isLeftLess = mid - 1 < 0 ? true : nums[mid - 1] < nums[mid];
+            boolean isRightLess = mid + 1 == nums.length ? true : nums[mid + 1] < nums[mid];
+            if (isLeftLess && isRightLess) {
                 return mid;
             }
-            if (leftElem > rightElem) {
-                right = mid - 1;
+            if (isLeftLess) {
+                l = mid + 1;
             } else {
-                left = mid + 1;
+                r = mid - 1;
             }
         }
-        return left;
+        return l;
+    }
+
+    //------------------ Without binary search ----------------------
+
+    public int findPeakElement2(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            boolean isLeftLess = i - 1 < 0 ? true : nums[i - 1] < nums[i];
+            boolean isRightLess = i + 1 == nums.length ? true : nums[i + 1] < nums[i];
+            if (isLeftLess && isRightLess) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
